@@ -7,13 +7,13 @@ import './style/common.less';
 
 function Admin() {
   return (
-    <Row>
-      <Col span="3">
+    <Row className="container">
+      <Col span={4} className="nav-left">
         <NavLeft />
       </Col>
-      <Col span="21">
+      <Col span={20} className="main">
         <Header />
-        <Row>
+        <Row className="content">
           Content
         </Row>
         <Footer />
