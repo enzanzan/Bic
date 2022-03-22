@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Menu } from 'antd';
+import { Link } from 'react-router-dom';
 import MenuConfig from './../../config/menuConfig';
 import './index.less';
 
@@ -24,7 +25,9 @@ const NavLeft = () => {
         )
       }
       return (
-        <Menu.Item title={item.title} key={item.key}>{item.title}</Menu.Item>
+        <Menu.Item title={item.title} key={item.key}>
+          <Link to={item.key}>{item.title}</Link>
+        </Menu.Item>
       )
     })
   }

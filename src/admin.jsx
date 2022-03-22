@@ -3,9 +3,10 @@ import { Row, Col } from 'antd';
 import Header from './components/Header';
 import NavLeft from './components/NavLeft';
 import Footer from './components/Footer';
+import Home from './pages/home';
 import './style/common.less';
 
-function Admin() {
+const Admin = (props) => {
   return (
     <Row className="container">
       <Col span={4} className="nav-left">
@@ -14,12 +15,11 @@ function Admin() {
       <Col span={20} className="main">
         <Header />
         <Row className="content">
-          Content
+          {props.children}
         </Row>
         <Footer />
       </Col>
     </Row>
-
   );
 }
 
